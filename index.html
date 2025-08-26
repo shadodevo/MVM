@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVM Studio Dashboard</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4f46e5"/>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/gL8gSoJ.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MVM Studio">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style id="dynamic-theme-styles">
+      :root {
+        --font-inter: 'Inter', sans-serif;
+        --font-cairo: 'Cairo', sans-serif;
+        
+        /* Default Theme Variables */
+        --color-primary: #4f46e5;
+        --radius: 0.75rem;
+        --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --card-border-width: 1px;
+
+        --color-bg-primary: #f9fafb;
+        --color-bg-secondary: #ffffff;
+        --color-text-primary: #111827;
+        --color-text-secondary: #6b7280;
+        --color-border: #e5e7eb;
+      }
+    </style>
+    <style>
+      body {
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        font-family: var(--font-inter);
+      }
+      /* Applying dynamic styles */
+      .themed-bg-primary { background-color: var(--color-primary); }
+      .themed-text-primary { color: var(--color-primary); }
+      
+      .themed-bg-secondary { background-color: var(--color-bg-secondary); }
+      .themed-text-secondary { color: var(--color-text-secondary); }
+      .themed-border { border-color: var(--color-border); }
+      
+      .themed-rounded { border-radius: var(--radius); }
+      .themed-shadow { box-shadow: var(--card-shadow); }
+      .themed-card-border { border-width: var(--card-border-width); }
+    </style>
+     <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+               primary: 'var(--color-primary)',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              cairo: ['Cairo', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

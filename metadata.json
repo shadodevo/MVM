@@ -1,0 +1,8 @@
+{
+  "name": "MVM Studio Dashboard",
+  "description": "A comprehensive dashboard for MVM Studio to manage projects, tasks, employees, and settings. Features include multi-language support and light/dark themes.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
+}

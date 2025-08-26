@@ -1,0 +1,27 @@
+{
+  "name": "MVM Studio Dashboard",
+  "short_name": "MVM Studio",
+  "description": "A comprehensive dashboard for MVM Studio to manage projects, tasks, employees, and settings.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/gL8gSoJ.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.imgur.com/h53Mu1P.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+     {
+      "src": "https://i.imgur.com/h53Mu1P.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
